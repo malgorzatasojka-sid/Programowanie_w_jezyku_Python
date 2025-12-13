@@ -13,8 +13,12 @@ class Library:
             f"phone: {self.phone}"
         )
 
+
 class Employee:
-    def __init__(self, first_name, last_name, hire_date, birth_date, city, street, zip_code, phone):
+    def __init__(
+            self, first_name, last_name, hire_date, birth_date, city,
+            street, zip_code, phone
+    ):
         self.first_name = first_name
         self.last_name = last_name
         self.hire_date = hire_date
@@ -34,7 +38,10 @@ class Employee:
 
 
 class Book:
-    def __init__(self, library, publication_date, author_name, author_surname, number_of_pages):
+    def __init__(
+            self, library, publication_date, author_name,
+            author_surname, number_of_pages
+    ):
         self.library = library
         self.publication_date = publication_date
         self.author_name = author_name
@@ -48,6 +55,7 @@ class Book:
             f"pages: {self.number_of_pages}, "
             f"available at: {self.library}"
         )
+
 
 class Student:
     def __init__(self, first_name, last_name):
@@ -74,6 +82,7 @@ class Order:
             f"Student: {self.student}\n"
             f"Books:\n{books_str}"
         )
+
 
 library1 = Library(
     city="Katowice",
@@ -180,13 +189,9 @@ order1 = Order(
 order2 = Order(
     employee=employee2,
     student=student2,
-    books= [book3, book4, book5],
+    books=[book3, book4, book5],
     order_date="2025-12-11"
 )
 
 print(order1)
 print(order2)
-
-
-
-
